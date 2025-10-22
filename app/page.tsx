@@ -1,8 +1,10 @@
 'use client'
 
+import Spinner from '@/components/Spinner'
 import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation'
 import { useEffect } from 'react'
+  // update path if different
 
 export default function Home() {
   const { data: session, status } = useSession()
@@ -10,19 +12,15 @@ export default function Home() {
 
   useEffect(() => {
     if (status === 'loading') return
-
-    if (session) {
-      router.push('/chat')
-    } else {
-      router.push('/login')
-    }
+    if (session) router.push('/chat')
+    else router.push('/login')
   }, [session, status, router])
 
   return (
-    <div className="container">
-      <div className="card">
-        <h1>ChatBox</h1>
-        <p>Loading...</p>
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="flex flex-col items-center gap-4 p-8 rounded-xl shadow-sm bg-white">
+        <Spinner size={56} />
+        <p className="text-sm text-gray-600">Loading…</p>
       </div>
     </div>
   )
