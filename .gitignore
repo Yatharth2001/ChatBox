@@ -1,0 +1,63 @@
+# --- Node / package managers ---
+node_modules/
+.pnpm-debug.log*
+yarn.lock
+package-lock.json
+
+# --- Next.js / build output ---
+.next/
+out/
+dist/
+build/
+
+# --- Framework/tool caches ---
+.cache/
+.parcel-cache/
+.serverless/
+.dynamodb/
+.vercel/
+.netlify/
+
+# --- Logs ---
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Environment files (root and subfolders) ---
+# You said you want to ignore .env, env.backup, and env.example
+# These patterns catch both dotted and non-dotted names anywhere in the tree.
+.env
+.env.*
+.env.local
+**/.env
+**/.env.*
+**/*.env
+**/*.env.*
+env.backup
+.env.backup
+**/env.backup
+**/.env.backup
+env.example
+**/env.example
+
+# --- Editor/OS cruft ---
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- TypeScript build artifacts ---
+*.tsbuildinfo
+
+# --- Prisma ---
+# (Keep migrations if you use them; they should be committed.)
+# prisma/migrations/  # uncomment ONLY if you explicitly do not want to track migrations
+
+# --- Docker ---
+# (Keep Dockerfile and compose files tracked)
+# Add local-only files here if you create any:
+# docker-data/

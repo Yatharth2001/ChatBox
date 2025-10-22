@@ -1,0 +1,6 @@
+/* Tailwind v4 */
+@import "tailwindcss";
+
+/* Optional tiny animations used by the login card */
+@keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+@keyframes pop { from { transform: translateY(6px) scale(.985) } to { transform: translateY(0) scale(1) } }
